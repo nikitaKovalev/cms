@@ -6,12 +6,12 @@ import { nxCopyAssetsPlugin } from '@nx/vite/plugins/nx-copy-assets.plugin';
 
 export default defineConfig(({ mode }) => ({
   root: __dirname,
-  cacheDir: '../../node_modules/.vite/libs/core',
+  cacheDir: '../../node_modules/.vite/libs/renderer',
   plugins: [angular(), nxViteTsPaths(), nxCopyAssetsPlugin(['*.md'])],
   build: {
     lib: {
       entry: 'src/index.ts',
-      name: 'core',
+      name: 'renderer',
       fileName: 'index',
       formats: ['es', 'cjs']
     },
@@ -29,7 +29,7 @@ export default defineConfig(({ mode }) => ({
     }
   },
   test: {
-    name: 'core',
+    name: 'renderer',
     watch: false,
     globals: true,
     environment: 'jsdom',
@@ -37,7 +37,7 @@ export default defineConfig(({ mode }) => ({
     setupFiles: ['src/test-setup.ts'],
     reporters: ['default'],
     coverage: {
-      reportsDirectory: '../../coverage/libs/core',
+      reportsDirectory: '../../coverage/libs/renderer',
       provider: 'v8' as const,
     },
   },

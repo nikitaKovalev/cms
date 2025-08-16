@@ -1,7 +1,7 @@
 {
-  "name": "core",
+  "name": "components",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/core/src",
+  "sourceRoot": "libs/components/src",
   "prefix": "lib",
   "projectType": "library",
   "tags": [],
@@ -10,7 +10,7 @@
       "executor": "@nx/vite:build",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/libs/core"
+        "outputPath": "dist/libs/components"
       },
       "configurations": {
         "production": {
@@ -26,7 +26,7 @@
       "executor": "@nx/vite:test",
       "outputs": ["{options.reportsDirectory}"],
       "options": {
-        "reportsDirectory": "../../coverage/libs/core"
+        "reportsDirectory": "../../coverage/libs/components"
       }
     },
     "lint": {

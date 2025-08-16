@@ -16,7 +16,11 @@
     "baseUrl": ".",
     "paths": {
       "@cms/cdk": ["libs/cdk/src/index.ts"],
-      "@cms/core": ["libs/core/src/index.ts"]
+      "@cms/components": ["libs/components/src/index.ts"],
+      "@cms/core": ["libs/core/src/index.ts"],
+      "@cms/editor": ["libs/editor/src/index.ts"],
+      "@cms/registry": ["libs/registry/src/index.ts"],
+      "@cms/renderer": ["libs/renderer/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
