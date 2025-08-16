@@ -1,0 +1,30 @@
+{
+  "name": "cdk",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/cdk/src",
+  "prefix": "lib",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/cdk",
+        "main": "libs/cdk/src/index.ts",
+        "tsConfig": "libs/cdk/tsconfig.lib.json",
+        "assets": ["libs/cdk/*.md"]
+      }
+    },
+    "test": {
+      "executor": "@nx/js:vitest",
+      "outputs": ["{options.reportsDirectory}"],
+      "options": {
+        "reportsDirectory": "../../coverage/libs/cdk"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}
